@@ -23,7 +23,7 @@ repository               : "ruinov1st/ruinov1st.github.io" # academicpages/acade
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile1.png"
+  avatar           : "https://ruinov1st.github.io/images/profile1.png"
   name             : "Shirui Wei"
   pronouns         : "she/her"  
   bio              : "PhD student in Astronomy"
