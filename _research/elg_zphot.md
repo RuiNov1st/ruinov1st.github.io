@@ -3,25 +3,39 @@ title: "Photometric redshift estimation for emission line galaxies of DESI Legac
 collection: research
 permalink: /research/elg_zphot
 date: 2025-05-29
+venue: "Publications of the Astronomical Society of Australia (PASA)"
+paperurl: "https://doi.org/10.1017/pasa.2025.10056"
+citation: 'Shirui Wei et al. (2025). "Photometric redshift estimation for emission-line galaxies..." <i>PASA</i>. 42, e092.'
 excerpt: >
-  Emission line galaxies (ELGs) are one of the main targets for the DESI survey, serving as direct tracers of the star-forming period of the Universe. 
-  An accurate photometric redshift estimation helps decrease the selection failure rate and improve completeness. 
-  In Wei et al. 2025 <a href='https://doi.org/10.1017/pasa.2025.10056'>[Paper Link]</a>, we developed a multimodal deep learning model to integrate photometric images and catalogs, improving photometric redshift estimation for DESI ELGs.
+  Emission line galaxies (ELGs) are one of the main targets for the DESI survey. 
+  We developed a multimodal deep learning model to integrate photometric images and catalogs, achieving significant improvements in redshift estimation.
   <br/><br/>
-  <img src='/images/elg_zphot/model.png' style='width: 100%; max-width: 600px;'>
+  <img src='/images/elg_zphot/model.png' style='width: 100%; max-width: 600px; display: block; margin: 0 auto;'>
 ---
 
-Emission line galaxies (ELGs) are one of the main targets for the DESI survey, providing direct tracers of the star-forming period of the Universe. ELG target selection is mainly based on photometric redshift. **An accurate** photometric redshift estimation would help to decrease the failure rate of selection and improve the completeness of selection.
+Emission line galaxies (ELGs) are one of the main targets for the DESI survey, serving as direct tracers of the star-forming period of the Universe. Target selection for ELGs relies heavily on photometric redshift. **An accurate** photometric redshift estimation is crucial to decrease the selection failure rate and improve completeness.
 
-In **Wei et al. 2025** <a href='https://doi.org/10.1017/pasa.2025.10056'>[PASA, 2025]</a>, we developed a multimodal deep learning model to integrate **two types of multimodal data**: photometric images and catalogs, to improve current redshift estimation precision.
+In this work, we developed a multimodal deep learning model to integrate **two types of data**: photometric images and catalogs, aiming to improve current redshift estimation precision.
 
-### Key Findings:
-* **Performance:** Results show that our multimodal model achieves a **significant improvement** compared to using only images or photometric catalogs.
-<img src='/images/elg_zphot/tab1.png'>
-* **Redshift and Luminosity Dependences:** The model performs better for low-redshift and bright sources compared to faint and high-redshift sources.
-<img src='/images/elg_zphot/z_mag.png'>
-* **Robustness:** The model is robust across different ELG types; differences basically stem from redshift, luminosity, and **sample** number distributions.
+### Key Findings
 
-* **Outlier Analysis:** Outliers are mainly located in the low-redshift and faint region, where the **lack of samples** contributes to these prediction errors.
+**1. Performance Improvement**
+Results show that our multimodal model achieves an **improvement** compared to using only images or photometric catalogs.
 
-The improvement of using multimodal data for ELG photometric redshift will help improve ELG selection strategies.
+<div style="text-align: center; margin: 20px 0;">
+  <img src='/images/elg_zphot/tab1.png' style="max-width: 100%; border: 1px solid #eee; padding: 5px;">
+  <p style="font-size: 0.9em; color: #666; margin-top: 5px;"><i>Table 1: Performance comparison across different methods.</i></p>
+</div>
+
+**2. Redshift and Luminosity Dependence**
+The model performs better for low-redshift and bright sources compared to faint and high-redshift sources. Our analysis shows the model is robust across different ELG types.
+
+<div style="text-align: center; margin: 20px 0;">
+  <img src='/images/elg_zphot/z_mag.png' style="max-width: 80%;">
+  <p style="font-size: 0.9em; color: #666; margin-top: 5px;"><i>Figure: Redshift and magnitude distribution analysis.</i></p>
+</div>
+
+**3. Outlier Analysis**
+Outliers are mainly located in the low-redshift and faint region. Our investigation suggests that the **lack of training samples** in this specific domain is the primary contributor to these prediction errors.
+
+---
