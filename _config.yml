@@ -26,7 +26,7 @@ author:
   avatar           : "https://ruinov1st.github.io/images/profile1.jpg"
   name             : "Shirui Wei"
   pronouns         : "she/her"  
-  bio              : "A PhD student in Astronomy"
+  bio              : "PhD student in Astronomical Techniques and Methodology at NAOC"
   location         : "Beijing, China"
   employer         : "National Astronomical Observatories, Chinese Academy of Sciences (NAOC)"
   uri              : "https://ruinov1st.github.io"
@@ -219,6 +219,9 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
+  research:
+    output: true
+    permalink: /:collection/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
@@ -231,6 +234,7 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  
 
 
 # These settings control how pages and collections are included in the site
