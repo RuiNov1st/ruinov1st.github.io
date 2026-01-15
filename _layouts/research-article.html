@@ -33,13 +33,11 @@ layout: default
           
           <p class="page__meta">
             {% if page.date %}
-              <span style="margin-right: 15px;">
-                <i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ page.date | date: "%B %d, %Y" }}
-              </span>
+              <strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ page.date | date: "%B %d, %Y" }}</strong>
             {% endif %}
             
             {% if page.venue %}
-              <span>
+              <span style="margin-left: 15px;">
                 <i class="fa fa-fw fa-book" aria-hidden="true"></i> {{ page.venue }}
               </span>
             {% endif %}
@@ -52,32 +50,32 @@ layout: default
       </section>
 
       <footer class="page__meta">
+        <hr />
         
-        {% if page.paperurl or page.slidesurl or page.codeurl or page.bibtexurl or page.citation %}
-          <hr />
-          
+        {% if page.paperurl or page.slidesurl or page.codeurl or page.bibtexurl %}
           <div style="margin-bottom: 20px;">
-            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 15px;">
+            <h4 class="page__meta-title">Resources</h4>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
               {% if page.paperurl %}
-                <a href="{{ page.paperurl }}" class="btn btn--primary"><i class="fas fa-file-pdf"></i> Download Paper</a>
+                <a href="{{ page.paperurl }}" class="btn btn--primary"><i class="fas fa-file-pdf"></i> Paper</a>
               {% endif %}
               {% if page.slidesurl %}
-                <a href="{{ page.slidesurl }}" class="btn btn--info"><i class="fas fa-file-powerpoint"></i> Download Slides</a>
+                <a href="{{ page.slidesurl }}" class="btn btn--info"><i class="fas fa-file-powerpoint"></i> Slides</a>
               {% endif %}
               {% if page.codeurl %}
-                <a href="{{ page.codeurl }}" class="btn btn--success"><i class="fab fa-github"></i> Get Code</a>
+                <a href="{{ page.codeurl }}" class="btn btn--success"><i class="fab fa-github"></i> Code</a>
+              {% endif %}
+              {% if page.bibtexurl %}
+                <a href="{{ page.bibtexurl }}" class="btn btn--warning"><i class="fas fa-quote-right"></i> BibTeX</a>
               {% endif %}
             </div>
+          </div>
+        {% endif %}
 
-            {% if page.citation %}
-              <div class="notice--info">
-                <h4 style="margin-top: 0;"><i class="fas fa-quote-left"></i> Recommended Citation</h4>
-                <p style="font-size: 0.95em; margin-bottom: 0;">{{ page.citation }}</p>
-                {% if page.bibtexurl %}
-                  <p style="margin-top: 5px; font-size: 0.85em;"><a href="{{ page.bibtexurl }}">[Download BibTeX]</a></p>
-                {% endif %}
-              </div>
-            {% endif %}
+        {% if page.citation %}
+          <div class="notice--info">
+            <h4 style="margin-top: 0;"><i class="fas fa-quote-left"></i> Recommended Citation</h4>
+            <p style="font-size: 0.95em; margin-bottom: 0;">{{ page.citation }}</p>
           </div>
         {% endif %}
 

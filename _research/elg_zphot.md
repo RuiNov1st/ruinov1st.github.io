@@ -20,22 +20,23 @@ In this work, we developed a multimodal deep learning model to integrate **two t
 ### Key Findings
 
 **1. Performance Improvement**
-Results show that our multimodal model achieves an **improvement** compared to using only images or photometric catalogs.
 
-<div style="text-align: center; margin: 20px 0;">
-  <img src='/images/elg_zphot/tab1.png' style="max-width: 100%; border: 1px solid #eee; padding: 5px;">
-  <p style="font-size: 0.9em; color: #666; margin-top: 5px;"><i>Table 1: Performance comparison across different methods.</i></p>
-</div>
+Results show that our multimodal model achieves a **significant improvement** compared to using only images or photometric catalogs.
+
+<figure style="text-align: center; margin: 20px 0;">
+  <img src='/images/elg_zphot/tab1.png' style="max-width: 100%; border: 1px solid #ddd; padding: 5px; border-radius: 4px;">
+  <figcaption style="color: #666; font-size: 0.9em; margin-top: 5px;"><i>Table 1: Performance comparison across different methods.</i></figcaption>
+</figure>
 
 **2. Redshift and Luminosity Dependence**
+
 The model performs better for low-redshift and bright sources compared to faint and high-redshift sources. Our analysis shows the model is robust across different ELG types.
 
-<div style="text-align: center; margin: 20px 0;">
+<figure style="text-align: center; margin: 20px 0;">
   <img src='/images/elg_zphot/z_mag.png' style="max-width: 80%;">
-  <p style="font-size: 0.9em; color: #666; margin-top: 5px;"><i>Figure: Redshift and magnitude distribution analysis.</i></p>
-</div>
+  <figcaption style="color: #666; font-size: 0.9em; margin-top: 5px;"><i>Figure 2: Redshift and magnitude distribution analysis.</i></figcaption>
+</figure>
 
 **3. Outlier Analysis**
-Outliers are mainly located in the low-redshift and faint region. Our investigation suggests that the **lack of training samples** in this specific domain is the primary contributor to these prediction errors.
 
----
+Outliers are mainly located in the low-redshift and faint region. Our investigation suggests that the **lack of training samples** in this specific domain is the primary contributor to these prediction errors.
