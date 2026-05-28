@@ -9,6 +9,9 @@ author_profile: true
 
 Here is a summary of my ongoing and previous projects.
 
-{% for post in site.research %}
-  {% include archive-single.html %}
-{% endfor %}
+<div class="research-list">
+  {% assign research_items = site.research | sort: "date" | reverse %}
+  {% for post in research_items %}
+    {% include research-card.html %}
+  {% endfor %}
+</div>

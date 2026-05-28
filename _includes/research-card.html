@@ -1,0 +1,52 @@
+{% include base_path %}
+
+{% assign title = post.title | markdownify | strip_html | strip_newlines %}
+
+<article class="research-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <a class="research-card__media" href="{{ base_path }}{{ post.url }}" aria-label="Read more about {{ title }}">
+    {% if post.representative_image %}
+      <img src="{{ post.representative_image | prepend: "/images/" | prepend: base_path }}" alt="{{ title }}">
+    {% else %}
+      <div class="research-card__placeholder">
+        <span>{{ post.placeholder_label | default: "Research" }}</span>
+      </div>
+    {% endif %}
+  </a>
+
+  <div class="research-card__body">
+    <h2 class="research-card__title" itemprop="headline">
+      <a href="{{ base_path }}{{ post.url }}">{{ title }}</a>
+    </h2>
+
+    {% if post.authors %}
+      <p class="research-card__authors" itemprop="author">{{ post.authors }}</p>
+    {% endif %}
+
+    {% if post.highlight %}
+      <p class="research-card__highlight"><strong>Highlight:</strong> {{ post.highlight }}</p>
+    {% elsif post.excerpt %}
+      <div class="research-card__highlight">{{ post.excerpt | markdownify }}</div>
+    {% endif %}
+
+    <p class="research-card__meta">
+      {% if post.venue %}<span>{{ post.venue }}</span>{% endif %}
+      {% if post.date %}<span>{{ post.date | date: "%Y" }}</span>{% endif %}
+      {% if post.doi %}<span>DOI: {{ post.doi }}</span>{% endif %}
+    </p>
+
+    <div class="research-card__links">
+      <a href="{{ base_path }}{{ post.url }}">Details</a>
+      {% if post.paperurl %}<a href="{{ post.paperurl }}">DOI</a>{% endif %}
+      {% if post.journal_url %}<a href="{{ post.journal_url }}">Journal Article</a>{% endif %}
+      {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
+    </div>
+
+    {% if post.keywords %}
+      <ul class="research-card__keywords" aria-label="Keywords">
+        {% for keyword in post.keywords %}
+          <li>{{ keyword }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+</article>

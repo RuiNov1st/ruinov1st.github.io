@@ -11,8 +11,8 @@ locale                   : "en-US"
 site_theme               : "default" # Currently available options are "default", "air"
 title                    : "Shirui Wei / 韦诗睿" # Your Name / Site Title
 title_separator          : "-"
-name                     : &name "Shirui wei"
-description              : &description "Shirui's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : &name "Shirui Wei"
+description              : &description "Shirui Wei's academic website: PhD student in astronomy at NAOC, research on galaxy properties, photometric redshifts, and DESI Legacy Imaging Surveys."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : https://ruinov1st.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -23,7 +23,7 @@ repository               : "ruinov1st/ruinov1st.github.io" # academicpages/acade
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "https://ruinov1st.github.io/images/profile1.jpg"
+  avatar           : "me.png"
   name             : "Shirui Wei"
   pronouns         : "she/her"  
   bio              : "PhD student in Astronomical Techniques and Methodology at NAOC"
@@ -272,6 +272,15 @@ defaults:
       type: publications
     values:
       layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _research
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: research-article
       author_profile: true
       share: true
       comments: true
