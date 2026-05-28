@@ -16,3 +16,11 @@ Prior to my PhD, I was a visiting summer student at the [Max Planck Institute fo
 ### Research Highlights
 * **Multimodal Galaxy Analysis**: Using multimodal models for photometric redshift, SFR, stellar mass, metallicity estimation for DESI Legacy Imaging Surveys.
 * **Dwarf Galaxies**: Investigating physical properties of dwarf galaxies identified in JWST/OutThere Survey.
+
+### Main Research Topic
+
+The figure below summarizes my main research topic: multimodal galaxy physical properties estimation and its scientific applications in next-generation large-scale surveys.
+
+<figure style="text-align: center; margin: 1.5rem 0;">
+  <img src="/images/main_research.png" alt="Main research topic: multimodal galaxy physical properties estimation and scientific applications in next-generation large-scale surveys" style="max-width: 100%; border-radius: 8px;">
+</figure>
