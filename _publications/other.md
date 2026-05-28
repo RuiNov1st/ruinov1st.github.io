@@ -1,0 +1,3 @@
+S. Zhang et al., "No More Data Silos: Unified Microservice Failure Diagnosis With Temporal Knowledge Graph," in IEEE Transactions on Services Computing, vol. 17, no. 6, pp. 4013-4026, Nov.-Dec. 2024, doi: 10.1109/TSC.2024.3489444. keywords: {Microservice architectures;Measurement;Electronic mail;Prevention and mitigation;Knowledge graphs;Fuses;Monitoring;Anomaly detection;Accuracy;Time factors;Microservice;failure diagnosis;multimodal data;knowledge graph},
+
+Unveiling Quasars in Gaia DR3: Multimodal Classification and Redshift Estimation of BP/RP Sources with Deep Learning

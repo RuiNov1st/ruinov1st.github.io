@@ -53,3 +53,8 @@ The model performs better for low-redshift and bright sources compared to faint 
 **3. Outlier Analysis**
 
 Outliers are mainly located in the low-redshift and faint region. Our investigation suggests that the **lack of training samples** in this specific domain is the primary contributor to these prediction errors.
+
+<figure style="text-align: center; margin: 20px 0;">
+  <img src='/images/elg_zphot/fig10.png' style="max-width: 80%;">
+  <figcaption style="color: #666; font-size: 0.9em; margin-top: 5px;"><i>Figure 10: Distribution of outliers.</i></figcaption>
+</figure>

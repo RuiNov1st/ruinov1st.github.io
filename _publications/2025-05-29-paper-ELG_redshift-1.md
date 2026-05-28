@@ -9,7 +9,7 @@ date: 2025-05-29
 venue: 'Publications of the Astronomical Society of Australia (PASA)'
 slidesurl: 'https://ruinov1st.github.io/files/2025-annual-meeting-of-the-Chinese-Astronomical-Society.pdf'
 paperurl: 'https://doi.org/10.1017/pasa.2025.10056'
-research_url: '/research/elg_zphot/'
+research_url: '/research/elg_zphot'
 bibtexurl: 'https://ruinov1st.github.io/files/elg_pasa_bibtex.bib'
 citation: 'Wei, Shirui, et al. "Photometric redshift estimation for emission line galaxies of DESI Legacy Imaging Surveys by CNN-MLP." Publications of the Astronomical Society of Australia (2025): 1-15.'
 ---
