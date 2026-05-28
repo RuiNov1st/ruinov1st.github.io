@@ -11,6 +11,24 @@ author_profile: true
 
 {% endif %}
 
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
+{% include base_path %}
+
+{% assign talks = site.talks | sort: "date" | reverse %}
+
+<section class="talk-section">
+  <h2>Talks</h2>
+  <div class="talk-list">
+    {% for post in talks %}
+      {% include talk-card.html item=post %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="talk-section">
+  <h2>Posters</h2>
+  <div class="talk-list">
+    {% for poster in site.data.posters %}
+      {% include talk-card.html item=poster %}
+    {% endfor %}
+  </div>
+</section>

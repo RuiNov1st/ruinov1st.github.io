@@ -7,33 +7,33 @@ author_profile: true
 
 {% if site.author.ads %}
   <div class="wordwrap">
-    You can also find my publications on <a href="{{ site.author.ads }}">NASA ADS</a>. 
-        This page lists only my first-author paper.</div>
+    You can also find my publications on <a href="{{ site.author.ads }}">NASA ADS</a>.
+  </div>
 {% endif %}
 
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+{% assign publications = site.publications | sort: "date" | reverse %}
+
+<section class="publication-section">
+  <h2>First-author Publications</h2>
+  <div class="publication-list">
+  {% for post in publications %}
+    {% if post.first_author != false %}
+      {% include publication-card.html %}
+    {% endif %}
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
+  </div>
+</section>
+
+<section class="publication-section">
+  <h2>Co-authored Publications</h2>
+  <div class="publication-list">
+  {% for post in publications %}
+    {% if post.first_author == false %}
+      {% include publication-card.html %}
+    {% endif %}
   {% endfor %}
-{% endif %}
-
-
-
+  </div>
+</section>

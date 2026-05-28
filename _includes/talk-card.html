@@ -1,0 +1,33 @@
+{% include base_path %}
+
+{% assign item = include.item %}
+
+<article class="talk-card" itemscope itemtype="http://schema.org/PresentationDigitalDocument">
+  <div class="talk-card__body">
+    <p class="talk-card__type">{{ item.type | default: "Talk" }}</p>
+
+    <h3 class="talk-card__title" itemprop="headline">{{ item.title }}</h3>
+
+    <p class="talk-card__meta">
+      {% if item.venue %}<span>{{ item.venue }}</span>{% endif %}
+      {% if item.location %}<span>{{ item.location }}</span>{% endif %}
+      {% if item.date %}<span>{{ item.date | date: "%B %Y" }}</span>{% endif %}
+    </p>
+
+    {% if item.excerpt %}
+      <p class="talk-card__excerpt">{{ item.excerpt }}</p>
+    {% endif %}
+
+    <div class="talk-card__links">
+      {% if item.slidesurl %}
+        <a href="{{ item.slidesurl }}">Slides</a>
+      {% endif %}
+      {% if item.posterurl %}
+        <a href="{{ item.posterurl }}">Poster</a>
+      {% endif %}
+      {% if item.pdf and item.slidesurl == nil and item.posterurl == nil %}
+        <a href="{{ item.pdf | prepend: base_path }}">PDF</a>
+      {% endif %}
+    </div>
+  </div>
+</article>

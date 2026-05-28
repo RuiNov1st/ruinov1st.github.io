@@ -9,6 +9,8 @@ doi: "10.1017/pasa.2025.10056"
 authors: "Shirui Wei et al."
 highlight: "Combines DESI Legacy Imaging Surveys images and photometric catalogs with a CNN-MLP model to improve photometric redshift estimation for emission-line galaxies."
 journal_url: "https://doi.org/10.1017/pasa.2025.10056"
+github_url: "https://github.com/RuiNov1st/Zphot4ELG"
+slidesurl: "https://ruinov1st.github.io/files/2025-annual-meeting-of-the-Chinese-Astronomical-Society.pdf"
 representative_image: "elg_zphot/model.png"
 figure_caption: "CNN-MLP architecture combining DESI Legacy Imaging Surveys image cutouts and photometric catalog measurements for ELG photometric redshift estimation."
 keywords:

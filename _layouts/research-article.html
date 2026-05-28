@@ -60,6 +60,15 @@ layout: default
           {% if page.journal_url %}
             <a href="{{ page.journal_url }}">Journal Article</a>
           {% endif %}
+          {% if page.github_url %}
+            <a href="{{ page.github_url }}">GitHub</a>
+          {% endif %}
+          {% if page.dataset_url %}
+            <a href="{{ page.dataset_url }}">Dataset</a>
+          {% endif %}
+          {% if page.slidesurl %}
+            <a href="{{ page.slidesurl }}">Slides</a>
+          {% endif %}
           {% if page.bibtexurl %}
             <a href="{{ page.bibtexurl }}">BibTeX</a>
           {% endif %}

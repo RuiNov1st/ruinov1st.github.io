@@ -2,12 +2,14 @@
 title: "Photometric redshift estimation for emission-line galaxies in the DESI Legacy Imaging Surveys using CNN–MLP models"
 collection: publications
 category: manuscripts
+first_author: true
 permalink: /publication/2025-05-29-photometric-redshift-estimation
 excerpt: 'This work uses multimodal deep learning methods to estimate photometric redshifts for emission-line galaxies in DESI Legacy Imaging Surveys DR10.'
 date: 2025-05-29
 venue: 'Publications of the Astronomical Society of Australia (PASA)'
 slidesurl: 'https://ruinov1st.github.io/files/2025-annual-meeting-of-the-Chinese-Astronomical-Society.pdf'
 paperurl: 'https://doi.org/10.1017/pasa.2025.10056'
+research_url: '/research/elg_zphot/'
 bibtexurl: 'https://ruinov1st.github.io/files/elg_pasa_bibtex.bib'
 citation: 'Wei, Shirui, et al. "Photometric redshift estimation for emission line galaxies of DESI Legacy Imaging Surveys by CNN-MLP." Publications of the Astronomical Society of Australia (2025): 1-15.'
 ---

@@ -38,6 +38,8 @@
       <a href="{{ base_path }}{{ post.url }}">Details</a>
       {% if post.paperurl %}<a href="{{ post.paperurl }}">DOI</a>{% endif %}
       {% if post.journal_url %}<a href="{{ post.journal_url }}">Journal Article</a>{% endif %}
+      {% if post.github_url %}<a href="{{ post.github_url }}">GitHub</a>{% endif %}
+      {% if post.dataset_url %}<a href="{{ post.dataset_url }}">Dataset</a>{% endif %}
       {% if post.bibtexurl %}<a href="{{ post.bibtexurl }}">BibTeX</a>{% endif %}
     </div>
 

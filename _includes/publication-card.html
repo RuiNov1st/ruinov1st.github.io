@@ -1,0 +1,17 @@
+{% include base_path %}
+
+<article class="publication-card" itemscope itemtype="http://schema.org/ScholarlyArticle">
+  <p class="publication-card__citation" itemprop="citation">{{ post.citation }}</p>
+
+  <div class="publication-card__links">
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}">DOI</a>
+    {% endif %}
+    {% if post.research_url %}
+      <a href="{{ base_path }}{{ post.research_url }}">Research</a>
+    {% endif %}
+    {% if post.slidesurl %}
+      <a href="{{ post.slidesurl }}">Slides</a>
+    {% endif %}
+  </div>
+</article>
